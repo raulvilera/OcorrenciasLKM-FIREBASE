@@ -1505,7 +1505,7 @@
             // Preencher turmas dinamicamente
             async function loadClasses() {
                 try {
-                    const url = `${SCRIPT_BASE_URL}?action=getClasses`;
+                    const url = `${"https://script.google.com/macros/s/AKfycbyWBpCKe2fKjbITf0pFplRq-n8jnqSZfaYtf-by1q0S3CA0hNGBDg2bkR24vQa2tp7x/exec"}?action=getClasses`;
                     const response = await fetch(url);
                     const data = await response.json();
                     
@@ -2032,7 +2032,7 @@
             // Carregar estatísticas de alunos por período
             async function loadStudentPeriodStats() {
                 try {
-                    const url = `${SCRIPT_BASE_URL}?action=getStudentPeriodStats`;
+                    const url = `${"https://script.google.com/macros/s/AKfycbyWBpCKe2fKjbITf0pFplRq-n8jnqSZfaYtf-by1q0S3CA0hNGBDg2bkR24vQa2tp7x/exec"}?action=getStudentPeriodStats`;
                     const response = await fetch(url);
                     const data = await response.json();
                     
@@ -2204,3 +2204,4 @@
 </body>
 
 </html>
+
