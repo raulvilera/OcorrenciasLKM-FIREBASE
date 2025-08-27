@@ -1478,7 +1478,7 @@
             const SPREADSHEET_ID = "1u7qMsMHkZT47OZdar5qvshQDRA8XJrLgDjAZVOViAio";
             const SHEET_NAME = "OCORRENCIASDOSPROFESSORES";
             const STUDENT_SHEET_NAME = "TURMAS";
-            const SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycby9XLQKXMcoVXx44if57ZyKmZkfjS3nQy9jlwJCh0oqtYwWfABbkHUTtGOMdw-bEFg/exec";
+            const SCRIPT_BASE_URL = "https://script.google.com/macros/s/AKfycbxLibKwkQXvEeB1Or9c_p6brAUpPZTgDLx201qC7BR1GLEzh8aJ5f_pTTMVy7CrdNIv/exec";
 
             // Armazenar gráficos
             const charts = {};
@@ -1505,7 +1505,7 @@
             // Preencher turmas dinamicamente
             async function loadClasses() {
                 try {
-                    const url = `${"https://script.google.com/macros/s/AKfycbyWBpCKe2fKjbITf0pFplRq-n8jnqSZfaYtf-by1q0S3CA0hNGBDg2bkR24vQa2tp7x/exec"}?action=getClasses`;
+                    const url = `${"https://script.google.com/macros/s/AKfycbxLibKwkQXvEeB1Or9c_p6brAUpPZTgDLx201qC7BR1GLEzh8aJ5f_pTTMVy7CrdNIv/exec"}?action=getClasses`;
                     const response = await fetch(url);
                     const data = await response.json();
                     
@@ -1618,7 +1618,7 @@
                 }
 
                 // Buscar alunos reais da planilha
-                const url = `${"https://script.google.com/macros/s/AKfycbyWBpCKe2fKjbITf0pFplRq-n8jnqSZfaYtf-by1q0S3CA0hNGBDg2bkR24vQa2tp7x/exec"}?action=getStudents&class=${encodeURIComponent(selectedClass)}`;
+                const url = `${"https://script.google.com/macros/s/AKfycbxLibKwkQXvEeB1Or9c_p6brAUpPZTgDLx201qC7BR1GLEzh8aJ5f_pTTMVy7CrdNIv/exec"}?action=getStudents&class=${encodeURIComponent(selectedClass)}`;
                 
                 fetch(url)
                     .then(response => response.json())
@@ -2032,7 +2032,7 @@
             // Carregar estatísticas de alunos por período
             async function loadStudentPeriodStats() {
                 try {
-                    const url = `${"https://script.google.com/macros/s/AKfycbyWBpCKe2fKjbITf0pFplRq-n8jnqSZfaYtf-by1q0S3CA0hNGBDg2bkR24vQa2tp7x/exec"}?action=getStudentPeriodStats`;
+                    const url = `${"https://script.google.com/macros/s/AKfycbxLibKwkQXvEeB1Or9c_p6brAUpPZTgDLx201qC7BR1GLEzh8aJ5f_pTTMVy7CrdNIv/exec"}?action=getStudentPeriodStats`;
                     const response = await fetch(url);
                     const data = await response.json();
                     
@@ -2204,5 +2204,6 @@
 </body>
 
 </html>
+
 
 
