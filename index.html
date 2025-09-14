@@ -1476,7 +1476,7 @@
 / Configurações
 const CONFIG = {
     // SUBSTITUA PELA SUA URL DO GOOGLE APPS SCRIPT
-    APPS_SCRIPT_URL: 'https://script.google.com/macros/s/SEU_SCRIPT_ID/exec',
+    APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyMOoQfmCoqUIyY0vN-fpVm2GLqWHowZ5HsPSGAnOtnOfkRz0L5BxszyJgzQPVGp48h/exec',
     
     // Mapeamento de salas para intervalos do Google Sheets
     SALA_INTERVALS: {
@@ -1525,7 +1525,7 @@ async function handleSalaChange() {
 async function fetchAlunos(sala) {
     const interval = CONFIG.SALA_INTERVALS[sala];
     const response = await fetch(
-        `${CONFIG.APPS_SCRIPT_URL}?action=getAlunos&sala=${sala}&interval=${interval}`
+        `${CONFIG.'https://script.google.com/macros/s/AKfycbyMOoQfmCoqUIyY0vN-fpVm2GLqWHowZ5HsPSGAnOtnOfkRz0L5BxszyJgzQPVGp48h/exec'}?action=getAlunos&sala=${sala}&interval=${interval}`
     );
     const data = await response.json();
     return data.alunos || [];
@@ -1544,7 +1544,7 @@ async function handleFormSubmit(event) {
 // Enviar ocorrência para o backend
 async function submitOcorrencia(data) {
     try {
-        const response = await fetch(CONFIG.APPS_SCRIPT_URL, {
+        const response = await fetch(CONFIG.'https://script.google.com/macros/s/AKfycbyMOoQfmCoqUIyY0vN-fpVm2GLqWHowZ5HsPSGAnOtnOfkRz0L5BxszyJgzQPVGp48h/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ action: 'registrarOcorrencia', ...data })
@@ -1803,6 +1803,7 @@ function setupOcorrenciasHeaders() {
 </body>
 
 </html>
+
 
 
 
